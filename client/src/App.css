@@ -1,0 +1,474 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  color: #212121;
+  font-family: "Poppins",sans-serif;
+  display: grid;
+  place-items: center;
+  background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+}
+body {
+  margin: 0%;
+  padding: 0%;
+}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+
+.joinChatContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  place-items: center;
+  position: relative;
+  top: 10%;
+  position: relative;
+  
+}
+
+.joinChatContainer h3 {
+  font-size: 1.5rem;
+  background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  color: white;
+
+}
+.joinChatContainer input {
+  width: 210px;
+  height: 40px;
+  margin: 7px;
+  border: 2px solid #43a047;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.joinChatContainer button {
+  width: 225px;
+  height: 50px;
+  margin: 7px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  background: #43a047;
+  color: #fff;
+  cursor: pointer;
+}
+
+.joinChatContainer button:hover {
+  background: #2e7d32;
+}
+
+.chat-window {
+  /* width: 200px;
+  height: 420px; */
+  position: relative;
+  width: 90%;
+  height: 50%;
+  left: 15px;
+  top: 60px;
+  right: 50%;
+}
+
+.chat-window p {
+  margin: 0;
+
+}
+.chat-window .chat-header {
+  height: 45px;
+  border-radius: 6px;
+  background: #6153CC;
+  position: relative;
+  cursor: pointer;
+}
+.chat-window .chat-header p {
+  display: block;
+  padding: 0 1em 0 2em;
+  color: #fff;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+.chat-window .chat-body {
+  height: calc(450px - (45px + 70px));
+  border: 1px solid #263238;
+  background: #fff;
+
+  position: relative;
+}
+.chat-window .chat-body .message-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.chat-window .chat-body .message-container::-webkit-scrollbar {
+  display: none;
+}
+.chat-window .chat-body .message {
+  height: auto;
+  padding: 10px;
+  display: flex;
+}
+
+.chat-window .chat-body .message .message-content {
+  width: auto;
+  height: auto;
+  min-height: 40px;
+  max-width: 120px;
+  background-color: #43a047;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+#you {
+  justify-content: flex-start;
+}
+
+#you .message-content {
+  justify-content: flex-start;
+}
+
+#you .message-meta {
+  justify-content: flex-start;
+  margin-left: 5px;
+}
+
+#other {
+  justify-content: flex-end;
+}
+
+#other .message-content {
+  justify-content: flex-end;
+  background-color: cornflowerblue;
+}
+
+#other .message-meta {
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
+.message-meta #author {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.chat-window .chat-body .message .message-meta {
+  display: flex;
+  font-size: 12px;
+}
+
+.chat-window .chat-footer {
+  height: 40px;
+  border: 1px solid #263238;
+  border-top: none;
+  display: flex;
+}
+
+.chat-window .chat-footer input {
+  height: 100%;
+  flex: 85%;
+  border: 0;
+  padding: 0 0.7em;
+  font-size: 1em;
+  border-right: 1px dotted #607d8b;
+
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+.chat-window .chat-footer button {
+  border: 0;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  flex: 15%;
+  height: 100%;
+  background: lightgreen;
+  outline: none;
+  font-size: 25px;
+  color: lightgray;
+}
+
+.chat-window .chat-footer button:hover {
+  color: white;
+}
+.hide {
+  opacity: 0 !important;
+}
+/* ----------------- */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mobile {
+  width: 276px;
+  height: 555px;
+  background: url(../public//ios13-iphone-xs-home-assistive-touch.png);
+  background-size: cover;
+  border-radius: 30px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+}
+.screen {
+  position: relative;
+  background: #262626;
+  width: 256px;
+  height: 430px;
+  margin: 58px auto;
+  overflow: hidden;
+}
+.screen.active {
+  background: url(../public//logo192.png);
+  background-size: cover;
+}
+.screen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  height: 100%;
+  transform: skew(-5deg) translateX(-50%);
+}
+.home {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #cecece;
+  box-sizing: border-box;
+  cursor: pointer;
+  box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.1);
+}
+.inner {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: #262626;
+  box-sizing: border-box;
+}
+.inner::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -22px;
+  background: #262626;
+  width: 8px;
+  height: 8px;
+  border: 50%;
+}
+.inner::after {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #262626;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.volume {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 90px;
+  left: -2px;
+}
+.volume li {
+  list-style: none;
+  width: 2px;
+  height: 30px;
+  background: #ccc;
+  margin: 10px 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.silent {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50px;
+  left: -2px;
+}
+.silent li {
+  list-style: none;
+  width: 2px;
+  height: 20px;
+  background: #ccc;
+  margin: 10px 0;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.sleep {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 90px;
+  right: -2px;
+}
+.sleep li {
+  list-style: none;
+  width: 2px;
+  height: 30px;
+  background: #ccc;
+  margin: 10px 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* ----------------- */
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  
+}
+@keyframes animateTwo {
+  0% {
+    opacity: 1;
+    border-radius: 0;
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    border-radius: 50%;
+    transform: translateY(1000px) rotate(720deg);
+  }
+}
+.circles div {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+
+  top: -150px;
+  animation: animateTwo 25s linear infinite;
+}
+.circles div:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+.circles div:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+.circles div:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles div:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+.circles div:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles div:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+.circles div:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles div:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+.circles div:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+.circles div:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+.circles div:nth-child(11) {
+  left: 35%;
+  width: 250px;
+  height: 250px;
+  animation-delay: 0s;
+  animation-duration: 30s;
+}
+.circles div:nth-child(12) {
+  left: 10%;
+  width: 200px;
+  height: 200px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+.exit-btn{
+  position: absolute;
+  top: 68px;
+  right: 15px;
+  background: transparent;
+  cursor: pointer;
+  
+}
